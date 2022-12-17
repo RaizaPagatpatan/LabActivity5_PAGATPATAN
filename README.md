@@ -1,4 +1,6 @@
 # LabActivity5_PAGATPATAN
 
-Satisfying although worried if my methods are acceptable XD
+Satisfying although I'm worried if my methods are acceptable XD
+
+
 
