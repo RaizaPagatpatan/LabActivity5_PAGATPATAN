@@ -251,4 +251,13 @@
       </grid>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="radio_button">
+      <member id="3a74f"/>
+      <member id="3a74f"/>
+      <member id="aa6ea"/>
+      <member id="97d65"/>
+      <member id="a042b"/>
+    </group>
+  </buttonGroups>
 </form>

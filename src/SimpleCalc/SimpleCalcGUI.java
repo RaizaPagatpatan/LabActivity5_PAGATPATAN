@@ -16,6 +16,7 @@ public class SimpleCalcGUI extends  JFrame{
 
     public SimpleCalcGUI() {
         btnCompute.addActionListener(e -> {
+
             try {
                 int num1 = Integer.parseInt(tfNumber1.getText());
                 int num2 = Integer.parseInt(tfNumber2.getText());
@@ -39,6 +40,7 @@ public class SimpleCalcGUI extends  JFrame{
                 catch (ArithmeticException e2){
                 JOptionPane.showMessageDialog(null, "Error", null, JOptionPane.ERROR_MESSAGE);
             }
+
             });
     }
 
