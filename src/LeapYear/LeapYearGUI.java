@@ -19,19 +19,31 @@ public class LeapYearGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 //            JOptionPane.showMessageDialog();
-                int year = Integer.parseInt(tfYear.getText());
 
-                GregorianCalendar calendar = new GregorianCalendar();
 
-                if (calendar.isLeapYear(year))
-                {
-                    JOptionPane.showMessageDialog(null, "Leap Year");
+                try{
+                    int year = Integer.parseInt(tfYear.getText());
+
+                    GregorianCalendar calendar = new GregorianCalendar();
+
+                    if (calendar.isLeapYear(year))
+                    {
+                        JOptionPane.showMessageDialog(null, "Leap Year");
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Not a Leap Year");
+                    }
+                } catch (NumberFormatException leap){
+                    JOptionPane.showMessageDialog(null, "Enter Numeric Value!", null, JOptionPane.ERROR_MESSAGE);
                 }
-                else{
-                    JOptionPane.showMessageDialog(null, "Not a Leap Year");
-                }
+
             }
+
+
+
         });
+
+
     }
 
   public static void main(String[] args) {
@@ -41,6 +53,8 @@ public class LeapYearGUI extends JFrame {
         leapFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         leapFrame.pack();
         leapFrame.setVisible(true);
+
+
     }
 
 }
