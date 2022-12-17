@@ -1,8 +1,8 @@
 package LeapYear;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+//import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
 import java.util.GregorianCalendar;
 
 public class LeapYearGUI extends JFrame {
@@ -12,35 +12,28 @@ public class LeapYearGUI extends JFrame {
     private JTextField tfYear;
     private JButton btnCheckYear;
 
-    private JOptionPane LeapYear;
+//    private JOptionPane LeapYear;
 
     public LeapYearGUI() {
-        btnCheckYear.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        btnCheckYear.addActionListener(e -> {
 //            JOptionPane.showMessageDialog();
 
 
-                try{
-                    int year = Integer.parseInt(tfYear.getText());
+            try{
+                int year = Integer.parseInt(tfYear.getText());
 
-                    GregorianCalendar calendar = new GregorianCalendar();
+                GregorianCalendar calendar = new GregorianCalendar();
 
-                    if (calendar.isLeapYear(year))
-                    {
-                        JOptionPane.showMessageDialog(null, "Leap Year");
-                    }
-                    else{
-                        JOptionPane.showMessageDialog(null, "Not a Leap Year");
-                    }
-                } catch (NumberFormatException leap){
-                    JOptionPane.showMessageDialog(null, "Enter Numeric Value!", null, JOptionPane.ERROR_MESSAGE);
+                if (calendar.isLeapYear(year))
+                {
+                    JOptionPane.showMessageDialog(null, "Leap Year");
                 }
-
+                else{
+                    JOptionPane.showMessageDialog(null, "Not a Leap Year");
+                }
+            } catch (NumberFormatException e1){
+                JOptionPane.showMessageDialog(null, "Enter Numeric Value!", null, JOptionPane.ERROR_MESSAGE);
             }
-
-
-
         });
 
 
