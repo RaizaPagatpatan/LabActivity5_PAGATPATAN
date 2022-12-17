@@ -18,7 +18,7 @@ public class SimpleCalcGUI extends  JFrame{
         btnCompute.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
                     int num1 = Integer.parseInt(tfNumber1.getText());
                     int num2 = Integer.parseInt(tfNumber2.getText());
 
@@ -35,6 +35,12 @@ public class SimpleCalcGUI extends  JFrame{
                         int div = num1 / num2;
                         lblResult.setText(String.valueOf(div));
                     }
+                }   catch (NumberFormatException e1){
+                    JOptionPane.showMessageDialog(null, "Enter Numeric Value!", null, JOptionPane.ERROR_MESSAGE);
+                }
+                    catch (ArithmeticException e2){
+                    JOptionPane.showMessageDialog(null, "Error", null, JOptionPane.ERROR_MESSAGE);
+                }
                 }
 
 
