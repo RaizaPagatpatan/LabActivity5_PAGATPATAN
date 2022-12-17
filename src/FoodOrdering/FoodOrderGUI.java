@@ -1,8 +1,8 @@
 package FoodOrdering;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+//import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 
 public class FoodOrderGUI extends JFrame{
@@ -24,43 +24,40 @@ public class FoodOrderGUI extends JFrame{
     private JButton btnOrder;
 
     public FoodOrderGUI() {
-        btnOrder.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                DecimalFormat d = new DecimalFormat("0.00");
+        btnOrder.addActionListener(e -> {
+            DecimalFormat d = new DecimalFormat("0.00");
 
-                float amount = 0;
-                String msg = "";
-                if(cPizza.isSelected()){
-                    amount+=100;
-                }
-                if(cBurger.isSelected()){
-                    amount+=80;
-                }
-                if(cFries.isSelected()){
-                    amount+=65;
-                }
-                if(cSoftDrinks.isSelected()){
-                    amount+=55;
-                }
-                if(cTea.isSelected()){
-                    amount+=50;
-                }
-                if(cSundae.isSelected()){
-                    amount+=40;
-                }
-
-
-                if(rbNone.isSelected()) {
-                    JOptionPane.showMessageDialog(null,msg+"The total price is: "+ d.format(amount));}
-                else if(rb5.isSelected()) {
-                    JOptionPane.showMessageDialog(null,msg+"The total price is: "+ d.format(amount -(amount * .05)));}
-                else if(rb10.isSelected()) {
-                    JOptionPane.showMessageDialog(null,msg+"The total price is: "+ d.format(amount - (amount *.10)));}
-                else if(rb15.isSelected()) {
-                    JOptionPane.showMessageDialog(null,msg+"The total price is: "+ d.format(amount - (amount *.15))) ;}
-
+            float amount = 0;
+            String msg = "";
+            if(cPizza.isSelected()){
+                amount+=100;
             }
+            if(cBurger.isSelected()){
+                amount+=80;
+            }
+            if(cFries.isSelected()){
+                amount+=65;
+            }
+            if(cSoftDrinks.isSelected()){
+                amount+=55;
+            }
+            if(cTea.isSelected()){
+                amount+=50;
+            }
+            if(cSundae.isSelected()){
+                amount+=40;
+            }
+
+
+            if(rbNone.isSelected()) {
+                JOptionPane.showMessageDialog(null,msg+"The total price is: "+ d.format(amount));}
+            else if(rb5.isSelected()) {
+                JOptionPane.showMessageDialog(null,msg+"The total price is: "+ d.format(amount -(amount * .05)));}
+            else if(rb10.isSelected()) {
+                JOptionPane.showMessageDialog(null,msg+"The total price is: "+ d.format(amount - (amount *.10)));}
+            else if(rb15.isSelected()) {
+                JOptionPane.showMessageDialog(null,msg+"The total price is: "+ d.format(amount - (amount *.15))) ;}
+
         });
     }
 
