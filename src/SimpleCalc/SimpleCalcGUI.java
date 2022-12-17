@@ -50,11 +50,11 @@ public class SimpleCalcGUI extends  JFrame{
 
     public static void main(String[] args) {
 //       Simple calc main function :>
-        JFrame leapFrame = new JFrame("Simple Calculator");
-        leapFrame.setContentPane(new SimpleCalcGUI().panel1);
-        leapFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        leapFrame.pack();
-        leapFrame.setVisible(true);
+        JFrame calcFrame = new JFrame("Simple Calculator");
+        calcFrame.setContentPane(new SimpleCalcGUI().panel1);
+        calcFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        calcFrame.pack();
+        calcFrame.setVisible(true);
 
 
 
